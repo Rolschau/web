@@ -1,11 +1,88 @@
+
 <!DOCTYPE html>
-<html lang="da"><head>
+<html lang="da">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rolschau's web</title>
     <style>
-        .portfolio div { display:flex; flex-direction: column; text-align: center; height: 200px; }
+    body {
+        background-color: azure;
+        font-size: 15px;
+        font-weight: 500;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .portfolio{
+        width: calc(100% - 10em);
+        display:flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    .portfolio article { 
+        display:flex;
+        flex-direction: column;
+        gap: 5px;
+        height: fit-content;
+        width: 100%;
+        min-width: 100px;
+        box-shadow: 0 0 10px grey;
+        background-color: white;
+        border-radius: 5px;
+        padding: 15px;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .portfolio article .image {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .portfolio article .image .title {
+        border-radius: 0% 0% 10px 10px;
+        background-color: white;
+        color: black;
+        position: absolute;
+        padding: 5px;
+    }
+    .portfolio article .image img {
+        height: 100%;
+        width: 100%;
+    }
+    .portfolio article .image .hover {
+        background-color: rgba(0,0,0,0.25);
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+    .portfolio article .image .hover:hover {
+        opacity: 1;
+    }
+    .portfolio article .image .hover .link {
+        padding: 15px;
+        width: 50px;
+        height: 50px;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        background-color: rgba(0,0,0,0.25);
+        color: white;
+    }
+    .portfolio article .text {
+        
+    }
     </style>
 </head>
 <body>
@@ -15,11 +92,36 @@
         </h1>
     </header>
     <main>
-        <section class="portfolio" style="display:flex;align-items: center;justify-content: center;">
-        <div style="width:100%;">a</div>
-        <div style="width:100%;">b</div>
-        <div style="width:100%;">c</div>
-    </section>
+        <section class="portfolio">
+            <article>
+                <div class="image">
+                    <div class="title">Eksempel</div>
+                    <img src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" alt="Eksempel-billede">
+                    <div class="hover">
+                        <a href="https://www.google.com">
+                            <div class="link">
+                                <img src="https://e7.pngegg.com/pngimages/358/453/png-clipart-computer-icons-hyperlink-symbol-miscellaneous-text-thumbnail.png" style="filter: invert(1);" alt="Link">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo voluptate porro</div>     
+            </article>
+            <article>
+                <div class="image">
+                    <div class="title">Eksempel</div>
+                    <img src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" alt="Eksempel-billede">
+                    <div class="hover">
+                        <a href="https://www.google.com">
+                            <div class="link">
+                                <img src="https://e7.pngegg.com/pngimages/358/453/png-clipart-computer-icons-hyperlink-symbol-miscellaneous-text-thumbnail.png" style="filter: invert(1);" alt="Link">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo voluptate porro</div>   
+            </article>
+        </section>
     </main>
     <footer></footer>
 </body>
